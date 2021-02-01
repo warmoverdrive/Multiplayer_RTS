@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.5651618, g: 0.6357212, b: 0.7219677, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -176,8 +176,9 @@ GameObject:
   m_Component:
   - component: {fileID: 233358179}
   - component: {fileID: 233358178}
+  - component: {fileID: 233358180}
   m_Layer: 0
-  m_Name: UnitSelectionHandler
+  m_Name: UnitHandlers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -212,6 +213,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &233358180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233358177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222e14350a625344eb80d80afe2a7042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitSelectionHandler: {fileID: 233358178}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &299847233
 GameObject:
   m_ObjectHideFlags: 0
