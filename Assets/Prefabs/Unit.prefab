@@ -109,7 +109,6 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   agent: {fileID: 8791226811378872427}
-  mainCamera: {fileID: 0}
 --- !u!114 &6915068782099574594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  unitMovement: {fileID: 1268993775480528135}
   onSelected:
     m_PersistentCalls:
       m_Calls:
