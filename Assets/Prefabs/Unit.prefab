@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6915068782099574594}
   - component: {fileID: 3132270739157084867}
   - component: {fileID: 2863470716302215103}
+  - component: {fileID: 5727244083403916055}
   m_Layer: 0
   m_Name: Unit
   m_TagString: Untagged
@@ -38,6 +39,7 @@ Transform:
   - {fileID: 1044937669301291251}
   - {fileID: 2141191258889383428}
   - {fileID: 8442369359395673215}
+  - {fileID: 5775318270466324556}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -99,7 +101,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.75
   m_Speed: 5
-  m_Acceleration: 1
+  m_Acceleration: 5
   avoidancePriority: 50
   m_AngularSpeed: 180
   m_StoppingDistance: 1.75
@@ -202,6 +204,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+--- !u!114 &5727244083403916055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576099237385262673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d67655f0b5a304192bc81a8653262e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  targeter: {fileID: 2863470716302215103}
+  projectilePrefab: {fileID: 9130020720517195510, guid: f0e6a2a9ca3eb6f4d8d41d6ac832522c, type: 3}
+  projectileSpawnPoint: {fileID: 5775318270466324556}
+  fireRange: 9
+  fireRate: 1
+  rotationSpeed: 20
 --- !u!1 &3682390076995220105
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,6 +335,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4137081503064539375}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4349504499891670989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5775318270466324556}
+  m_Layer: 0
+  m_Name: ProjectileSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5775318270466324556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4349504499891670989}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.62, z: 2.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4137081503064539375}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &651584039800385304
 PrefabInstance:
