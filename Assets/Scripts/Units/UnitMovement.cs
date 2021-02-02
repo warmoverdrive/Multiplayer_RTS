@@ -4,6 +4,7 @@ using UnityEngine.AI;
 
 public class UnitMovement : NetworkBehaviour
 {
+	[SerializeField] private float chaseRange = 10f;
 	[SerializeField] private NavMeshAgent agent = null;
 	[SerializeField] private Targeter targeter = null;
 
@@ -12,9 +13,29 @@ public class UnitMovement : NetworkBehaviour
 	[ServerCallback]
 	private void Update()
 	{
+		Targetable target = targeter.GetTarget();
+
+		if (target != null)
+		{
+			// this avoids Vector3.Distance, which uses Square Roots which are expensive calls
+			// this finds the magnitude distance between points squared, and then checks it against
+			// range squared.
+			if ((target.transform.position - transform.position).sqrMagnitude > chaseRange * chaseRange)
+			{
+				agent.SetDestination(target.transform.position);
+			}
+			else if (agent.hasPath)
+			{
+				agent.ResetPath();
+			}
+
+			return;
+		}
+
 		if (!agent.hasPath) return;
 		if (agent.remainingDistance > agent.stoppingDistance)
 			return;
+
 		agent.ResetPath();
 	}
 
