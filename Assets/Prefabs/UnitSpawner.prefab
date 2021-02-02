@@ -30,6 +30,36 @@ Transform:
   m_Father: {fileID: 3208332139646204487}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5784180278154729534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 358391564761954370}
+  m_Layer: 0
+  m_Name: AimAtPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &358391564761954370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5784180278154729534}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3208332139646204487}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7036469493421371465
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,6 +153,7 @@ GameObject:
   - component: {fileID: 7570624934126928985}
   - component: {fileID: 1310586473842390200}
   - component: {fileID: 2417753553207993354}
+  - component: {fileID: 3669339064792431397}
   m_Layer: 0
   m_Name: UnitSpawner
   m_TagString: Untagged
@@ -143,6 +174,7 @@ Transform:
   m_Children:
   - {fileID: 1386548455721262068}
   - {fileID: 823192462334685604}
+  - {fileID: 358391564761954370}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -191,3 +223,18 @@ MonoBehaviour:
   syncInterval: 0.1
   unitPrefab: {fileID: 1576099237385262673, guid: db8b08b8c020b3a429f6f97c5d5e4c78, type: 3}
   unitSpawnPoint: {fileID: 823192462334685604}
+--- !u!114 &3669339064792431397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7769296730553415797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c41e4ed219c12c498cdfeee10a7d3c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  aimAtPoint: {fileID: 358391564761954370}
