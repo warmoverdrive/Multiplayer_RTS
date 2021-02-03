@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 5727244083403916055}
   - component: {fileID: 8449682767175908369}
   - component: {fileID: -6383019659415626446}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Unit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2141191258889383428}
   - component: {fileID: 2192509667471921107}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SelectedHighlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8442369359395673215}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AimAtPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5775318270466324556}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ProjectileSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,6 +463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tank with lazer cannon
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9cc421ec5dd1d054b8a666e1c125ec0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cc421ec5dd1d054b8a666e1c125ec0e, type: 3}
 --- !u!4 &1044937669301291251 stripped
@@ -477,13 +481,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4137081503064539375}
     m_Modifications:
+    - target: {fileID: 3895110847510197975, guid: a81ee7a8aac4ab6468f09f91186e4b4f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5154411093301454762, guid: a81ee7a8aac4ab6468f09f91186e4b4f, type: 3}
       propertyPath: m_Name
       value: HealthBarCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 5154411093301454762, guid: a81ee7a8aac4ab6468f09f91186e4b4f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154411093301454762, guid: a81ee7a8aac4ab6468f09f91186e4b4f, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549972192843979469, guid: a81ee7a8aac4ab6468f09f91186e4b4f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8586729281527664117, guid: a81ee7a8aac4ab6468f09f91186e4b4f, type: 3}
       propertyPath: m_Pivot.x
