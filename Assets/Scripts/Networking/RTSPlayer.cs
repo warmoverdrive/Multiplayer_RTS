@@ -64,6 +64,11 @@ public class RTSPlayer : NetworkBehaviour
 		if (buildingToPlace == null)
 			return;
 
+		// check if player can afford, then update resources
+		if (GetResources() < buildingToPlace.GetPrice())
+			return;
+		ModifyResources(-buildingToPlace.GetPrice());
+
 		GameObject buildingInstance = Instantiate(
 			buildingToPlace.gameObject, position, buildingToPlace.transform.rotation);
 

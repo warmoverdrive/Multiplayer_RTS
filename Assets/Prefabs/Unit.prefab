@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  resourceCost: 10
   health: {fileID: 8449682767175908369}
   unitMovement: {fileID: 1268993775480528135}
   targeter: {fileID: 2863470716302215103}
@@ -274,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2141191258889383428
 Transform:
   m_ObjectHideFlags: 0
