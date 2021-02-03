@@ -6,7 +6,9 @@ using UnityEngine;
 
 public class RTSPlayer : NetworkBehaviour
 {
+	[SerializeField] private LayerMask buildingBlockLayer = new LayerMask();
 	[SerializeField] private Building[] buildings = new Building[0];
+	[SerializeField] private float buildingRangeLimit = 5f;
 
 	[SerializeField]
 	[SyncVar (hook = nameof(ClientHandleResourcesUpdated))]
@@ -15,13 +17,32 @@ public class RTSPlayer : NetworkBehaviour
 	public event Action<int> ClientOnResourcesUpdated;
 
     private List<Unit> myUnits = new List<Unit>();
-	private List<Building> myBuildings = new List<Building>();
+	[SerializeField] private List<Building> myBuildings = new List<Building>();
 
 	public int GetResources() { return resources; }
 	[Server]
 	public void ModifyResources(int changeInResources) { resources += changeInResources; }
 	public List<Unit> GetMyUnits() { return myUnits; }
 	public List<Building> GetMyBuildings() { return myBuildings; }
+
+	public bool CanPlaceBuilding(BoxCollider buildingCollider, Vector3 position)
+	{
+		if (Physics.CheckBox(
+			position + buildingCollider.center, buildingCollider.size / 2,
+			Quaternion.identity, buildingBlockLayer))
+			return false;
+
+		foreach (var building in myBuildings)
+		{
+			if ((position - building.transform.position).sqrMagnitude <=
+				buildingRangeLimit * buildingRangeLimit)
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
 
 	#region Server
 
@@ -64,15 +85,20 @@ public class RTSPlayer : NetworkBehaviour
 		if (buildingToPlace == null)
 			return;
 
-		// check if player can afford, then update resources
-		if (GetResources() < buildingToPlace.GetPrice())
+		if (resources < buildingToPlace.GetPrice())
 			return;
-		ModifyResources(-buildingToPlace.GetPrice());
+
+		BoxCollider buildingCollider = buildingToPlace.GetComponent<BoxCollider>();
+
+		if (!CanPlaceBuilding(buildingCollider, position))
+			return;
 
 		GameObject buildingInstance = Instantiate(
 			buildingToPlace.gameObject, position, buildingToPlace.transform.rotation);
 
 		NetworkServer.Spawn(buildingInstance, connectionToClient);
+
+		ModifyResources(-buildingToPlace.GetPrice());
 	}
 
 	[Server]
