@@ -27,7 +27,6 @@ public class UnitCommandGiver : MonoBehaviour
 
 		if (hit.collider.TryGetComponent(out Targetable target))
 		{
-			Debug.Log(hit.collider.gameObject);
 			if (target.hasAuthority)
 			{
 				TryMove(hit.point);
