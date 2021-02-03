@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302615582900292873}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.125, z: 0}
-  m_LocalScale: {x: 2, y: 0.25, z: 2}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4307450103641229468}
   m_RootOrder: 0
@@ -95,7 +95,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2022816841395811183
+--- !u!114 &2380311984898328064
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,14 +104,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 193757201800066477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24a516e3895a1794b94f3804a0aca25b, type: 3}
+  m_Script: {fileID: 11500000, guid: 03755ba815663a243b5d26b1fdcb27b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
   health: {fileID: 6817598090606892131}
-  unitPrefab: {fileID: 1576099237385262673, guid: db8b08b8c020b3a429f6f97c5d5e4c78, type: 3}
-  unitSpawnPoint: {fileID: 1198870451900130526}
+  resourcesPerInterval: 10
+  interval: 2
 --- !u!1 &8542754385488035128
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4307450103641229468}
   m_Layer: 0
-  m_Name: UnitSpawnerPreview
+  m_Name: BuildingPreview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,20 +151,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 279750802697576203, guid: 7fed692d5e870be44be6579125764bce, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 279750802697576203, guid: 7fed692d5e870be44be6579125764bce, type: 3}
-      propertyPath: m_Size.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 279750802697576203, guid: 7fed692d5e870be44be6579125764bce, type: 3}
-      propertyPath: m_Size.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 279750802697576203, guid: 7fed692d5e870be44be6579125764bce, type: 3}
       propertyPath: m_Center.y
-      value: 0.125
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 672758856658636736, guid: 7fed692d5e870be44be6579125764bce, type: 3}
       propertyPath: sceneId
@@ -177,10 +165,6 @@ PrefabInstance:
     - target: {fileID: 734910918946178373, guid: 7fed692d5e870be44be6579125764bce, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 734910918946178373, guid: 7fed692d5e870be44be6579125764bce, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 734910918946178373, guid: 7fed692d5e870be44be6579125764bce, type: 3}
       propertyPath: m_LocalPosition.x
@@ -224,7 +208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1484669870166348740, guid: 7fed692d5e870be44be6579125764bce, type: 3}
       propertyPath: m_Name
-      value: UnitSpawner
+      value: ResourceGenerator
       objectReference: {fileID: 0}
     - target: {fileID: 2039421406324598944, guid: 7fed692d5e870be44be6579125764bce, type: 3}
       propertyPath: m_IsActive
@@ -232,15 +216,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3105685267443529739, guid: 7fed692d5e870be44be6579125764bce, type: 3}
       propertyPath: id
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3105685267443529739, guid: 7fed692d5e870be44be6579125764bce, type: 3}
       propertyPath: icon
       value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: -2413806693520163455, guid: fb95653e28eb0274d8d12df02a865596, type: 3}
     - target: {fileID: 3105685267443529739, guid: 7fed692d5e870be44be6579125764bce, type: 3}
       propertyPath: price
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3105685267443529739, guid: 7fed692d5e870be44be6579125764bce, type: 3}
       propertyPath: buildingPreview
@@ -249,6 +233,10 @@ PrefabInstance:
     - target: {fileID: 3237929438577951487, guid: 7fed692d5e870be44be6579125764bce, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579966454937423692, guid: 7fed692d5e870be44be6579125764bce, type: 3}
+      propertyPath: m_Carve
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5579966454937423692, guid: 7fed692d5e870be44be6579125764bce, type: 3}
       propertyPath: m_Center.y
