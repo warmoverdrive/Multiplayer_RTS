@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  cameraTransform: {fileID: 6334087828193788845}
   buildingBlockLayer:
     serializedVersion: 2
     m_Bits: 321
@@ -157,8 +158,8 @@ MonoBehaviour:
   playerCameraTransform: {fileID: 6334087828193788845}
   speed: 20
   screenBorderThickness: 10
-  screenXLimits: {x: -20, y: 20}
-  screenZLimits: {x: -20, y: 20}
+  screenXLimits: {x: -5, y: 5}
+  screenZLimits: {x: -17.25, y: -10}
 --- !u!1 &8046061719409738011
 GameObject:
   m_ObjectHideFlags: 0
