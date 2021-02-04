@@ -98,6 +98,23 @@ MonoBehaviour:
   health: {fileID: 6817598090606892131}
   resourcesPerInterval: 10
   interval: 2
+--- !u!114 &6213802502613823623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193757201800066477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f008a43fcd02c14ba8bbdd9471c5f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  isEmission: 0
+  colorRenderers:
+  - {fileID: 3305879080200968244}
 --- !u!1 &8542754385488035128
 GameObject:
   m_ObjectHideFlags: 0
