@@ -138,7 +138,8 @@ MonoBehaviour:
   buildings:
   - {fileID: 4409967470734499426, guid: e3542ddefaeb3de40aa2c383bc34767a, type: 3}
   - {fileID: 4409967470734499426, guid: 4234d480f9e016640bead9baf017be18, type: 3}
-  buildingRangeLimit: 5
+  - {fileID: 7386657750668381446, guid: c7640d4262130cb4ca35b529f3a83ee4, type: 3}
+  buildingRangeLimit: 7
   resources: 500
   myBuildings: []
 --- !u!114 &9046982834218281532

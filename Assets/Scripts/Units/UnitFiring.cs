@@ -8,6 +8,7 @@ public class UnitFiring : NetworkBehaviour
     [SerializeField] private Targeter targeter = null;
     [SerializeField] private GameObject projectilePrefab = null;
     [SerializeField] private Transform projectileSpawnPoint = null;
+    [SerializeField] private int damage = 20;
     [SerializeField] private float fireRange = 5f;
     [SerializeField] private float fireRate = 1f;
     [SerializeField] private float rotationSpeed = 20f;
@@ -43,6 +44,8 @@ public class UnitFiring : NetworkBehaviour
 
             // spawn projectile over the network and give ownership to this unit's owner
             NetworkServer.Spawn(projectileInstance, connectionToClient);
+
+            projectileInstance.GetComponent<UnitProjectile>().SetDamageToDeal(damage);
 
             lastFireTime = Time.time;
 		}

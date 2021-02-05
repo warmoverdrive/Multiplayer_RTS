@@ -6,9 +6,12 @@ using UnityEngine;
 public class UnitProjectile : NetworkBehaviour
 {
     [SerializeField] private Rigidbody rb = null;
-	[SerializeField] private int damageToDeal = 20;
     [SerializeField] private float destroyAfterSeconds = 5f;
     [SerializeField] private float launchForce = 10f;
+
+	private int damageToDeal = 0;
+
+	public void SetDamageToDeal(int damage) { damageToDeal = damage; }
 
 	private void Start()
 	{
