@@ -187,6 +187,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6e4d8dfe03882c54380948659f725233, type: 3}
   m_PrefabInstance: {fileID: 1479209854829409164}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &1479209854831569900 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: 6e4d8dfe03882c54380948659f725233, type: 3}
+  m_PrefabInstance: {fileID: 1479209854829409164}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1597307028148774505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -342,6 +347,18 @@ PrefabInstance:
       propertyPath: aimAtPoint
       value: 
       objectReference: {fileID: 252621454293525748}
+    - target: {fileID: 8302497634233738715, guid: 7fed692d5e870be44be6579125764bce, type: 3}
+      propertyPath: colorRenderers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302497634233738715, guid: 7fed692d5e870be44be6579125764bce, type: 3}
+      propertyPath: colorRenderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 1479209854831569900}
+    - target: {fileID: 8302497634233738715, guid: 7fed692d5e870be44be6579125764bce, type: 3}
+      propertyPath: colorRenderers.Array.data[1]
+      value: 
+      objectReference: {fileID: 8531989336195735229}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fed692d5e870be44be6579125764bce, type: 3}
 --- !u!1 &193757201800066477 stripped
@@ -365,6 +382,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3947d201a89b765498f38012794ca1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &8531989336195735229 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6939327256658770132, guid: 7fed692d5e870be44be6579125764bce, type: 3}
+  m_PrefabInstance: {fileID: 1597307028148774505}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6032174744444403030
 PrefabInstance:
   m_ObjectHideFlags: 0

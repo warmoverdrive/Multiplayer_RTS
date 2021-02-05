@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3369126296823520680}
   - component: {fileID: 3369126296823520681}
   - component: {fileID: 3369126296823520686}
-  - component: {fileID: 3369126296823520687}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -51,7 +50,7 @@ MonoBehaviour:
   showDebugMessages: 0
   serverTickRate: 30
   offlineScene: Assets/Scenes/Scene_Menu.unity
-  onlineScene: Assets/Scenes/Scene_Map_01.unity
+  onlineScene: 
   transport: {fileID: 3369126296823520686}
   networkAddress: localhost
   maxConnections: 4
@@ -68,9 +67,9 @@ MonoBehaviour:
   - {fileID: 193757201800066477, guid: 4234d480f9e016640bead9baf017be18, type: 3}
   - {fileID: 193757201800066477, guid: e3542ddefaeb3de40aa2c383bc34767a, type: 3}
   - {fileID: 1690231582025547392, guid: 3eaefeb610b6ee6469e3f2319e5fafac, type: 3}
-  - {fileID: 5704775928243830944, guid: c7640d4262130cb4ca35b529f3a83ee4, type: 3}
+  - {fileID: 6413593420524594889, guid: c7640d4262130cb4ca35b529f3a83ee4, type: 3}
   - {fileID: 212009462413831155, guid: 44e000ac65a295143ad28fcb88faa180, type: 3}
-  unitSpawnerPrefab: {fileID: 193757201800066477, guid: ef838c8780808634dace13d6b6688d28, type: 3}
+  unitBasePrefab: {fileID: 193757201800066477, guid: ef838c8780808634dace13d6b6688d28, type: 3}
   gameOverHandlerPrefab: {fileID: 3640252161503268240, guid: 88d753f0577618143bd99658b49b0fc1, type: 3}
 --- !u!114 &3369126296823520686
 MonoBehaviour:
@@ -93,18 +92,3 @@ MonoBehaviour:
   ReceiveWindowSize: 128
   debugLog: 0
   debugGUI: 0
---- !u!114 &3369126296823520687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3369126296823520684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  showGUI: 1
-  offsetX: 0
-  offsetY: 0
